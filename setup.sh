@@ -28,7 +28,12 @@ while true; do
 done
 
 
+#Allowing wheel group to use sudo
+sed -i -e "s/#wheel ALL=(ALL) ALL/wheel ALL=(ALL) ALL" /etc/sudoers
+
+
 #Installing programs
+pacman -Syu
 echo "Following programs will be installed: " $programs_list
 read -r -p "Continue (n for modifying) [y/n] " response
 response=${response,,}
@@ -63,7 +68,7 @@ make -C /usr/local/src/dwmblocks clean install
 make -C /usr/local/src/dmenu clean install
 
 
-#Setting up dotfiles
+#Setting up dotfiles shell etc
 ## Note to self: when I begin using XDM fix to work with XDM
 echo "Setting up my dotfiles"
 users=$(ls /home)
@@ -72,4 +77,5 @@ for user in $users; do
 	cp -rv /tmp/dotfiles/.* /home/$user/
 	chown $user /home/$user/*
 	chown $user /home/$user/.*
+	chsh -s /bin/zsh
 done
