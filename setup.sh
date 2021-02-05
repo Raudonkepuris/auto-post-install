@@ -1,6 +1,6 @@
 #!/bin/sh
 
-programs_list="git w3m vim firefox qbittorrent zathura zathura-pdf-mupdf zsh sxiv exa fontconfig gimp htop mpv vlc pcmanfm ranger rsync openssh xf86-video-intel alsa alsa-utils pulseaudio pulseaudio-alsa pamixer pulsemixer xorg xorg-server xorg-xinit"
+programs_list="git w3m vim firefox qbittorrent zathura zathura-pdf-mupdf zsh sxiv exa fontconfig gimp htop mpv vlc pcmanfm ranger rsync openssh xf86-video-intel alsa alsa-utils pulseaudio pulseaudio-alsa pamixer pulsemixer xorg xorg-server xorg-xinit devour discord exa ffmpeg firefox gcc gimp inxi maim mpv pamixer qbittorrent ranger rsync syncthing spacefm sxiv droidcam vlc w3m weechat xclip youtube-dl zathura zoom"
 
 
 #Add user
